@@ -63,6 +63,7 @@
   border: none;
   border-radius: 5px;
   margin-right: 0.5rem;
+  max-width: 300px;
 }
 
 .send-button {
@@ -72,6 +73,8 @@
   background-color: #4caf50;
   color: white;
   font-weight: bold;
+  width: 100%;
+  max-width: 200px;
 }
 
 .send-button:hover {
@@ -103,3 +106,45 @@
 .message-username {
   font-style: italic;
 }
+
+@media (max-width: 768px) {
+  .chat-container {
+    width: 100%;
+    height: calc(100vh - 200px); /* Se ajusta la altura para dejar espacio a los demás elementos */
+    border-radius: 0; /* Se eliminan las esquinas redondeadas */
+    box-shadow: none; /* Se elimina la sombra */
+  }
+  
+  .message-list {
+    padding: 0; /* Se eliminan los padding */
+  }
+  
+  .message {
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .message-input {
+    margin-right: 0;
+  }
+  
+  .send-button {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+  }
+  
+  .message-text {
+    font-size: 0.8rem;
+  }
+  
+  .message-username {
+    font-size: 0.8rem;
+  }
+
+  .input-form {
+    flex-direction: column;
+    border-radius: 1rem;
+  }
+}
+
+
