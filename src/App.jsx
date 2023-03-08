@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 
-const socket = io('http://localhost:4001');
+const socket = io(import.meta.env.VITE_URL_BACKEND);
 
 function App() {
   const [message, setMessage] = useState('');
